@@ -2,13 +2,30 @@
 
 Allows video overlays on events with rotation, skew, transparency, optional audio, and optional dynamic scanlines using PIXI Video Textures.
 
-## What This Is
+## What It Does
 
-This repository contains a standalone **RPG Maker MZ plugin** from Psychronic.
+This plugin enables video overlays on events using PIXI.js. It supports rotation, skew, transparency, optional audio, and an optional dynamically-generated scanline effect.
 
-## Plugin File
+## Highlights
 
-- `PSYCHRONIC_VideoOverlay.js`
+- The displayed video size is determined by the sprite's width/height, not the actual
+- Audio playback is optional. If enabled, the video is unmuted and routed through the
+- Smaller video display sizes reduce GPU overhead. For even better performance, provide
+- If `scanlines` is true, a small 2x2 dynamic bitmap is created with a dark top row and
+
+## Plugin Commands
+
+- PlayVideoOverlay
+- StopVideoOverlay
+
+## Basic Usage
+
+PlayVideoOverlay eventId:1 filename:"myvideo.mp4" sizeX:320 sizeY:240 scanlines:true
+
+## Compatibility
+
+- RPG Maker MZ
+- JavaScript plugin for `js/plugins/`
 
 ## Installation
 
@@ -23,6 +40,8 @@ This version was exported from the RPG Reactor Complex template source plugin fo
 ## Author
 
 Psychronic
+
+https://psychronic.itch.io
 
 ## License
 
